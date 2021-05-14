@@ -11,8 +11,9 @@
   <?php
     if (isset($_SESSION['message']) && $_SESSION['message'])
     {
-      echo '<p class="notification">'.$_SESSION['message'].'</p>';
+      echo '<h4><p style=' .$_SESSION['success'].';>'.$_SESSION['message'].'</p></h4>';
       unset($_SESSION['message']);
+      unset($_SESSION['success']);
     }
   ?>
   <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
